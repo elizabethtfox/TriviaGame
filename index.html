@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang='en-us'>
+
+<head>
+
+    <meta charset='UTF-8'>
+    <title>Trivia Game</title>
+
+    <!-- Bootstrap CDN -->
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' integrity='sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7' crossorigin='anonymous'>
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/images">
+
+</head>
+
+<body>
+<!--Main container-->
+<div class="container">
+
+    <!--Jumbotron-->
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Parks and Rec Trivia</h1>
+            <h2>How well do you know TV's favorite local government?</h2>
+        </div>
+    </div>
+
+    <!--Word to guess section-->
+    <div class="row">
+        <div class=" main col-md-12">
+            <div class='panel panel-default'>
+                <div class='panel-heading'>
+                    <div class="timer"></div>
+                    <h3 class='panel-title'><span id="question"></span></h3>
+                </div>
+
+                <div class="choices panel-body">
+                    <button id="btn0" type="button" class="answerChoice btn btn-primary"><span id="choice0"></span></button>
+                    <button id="btn1" type="button" class="answerChoice btn btn-primary"><span id="choice1"></span></button>
+                    <button id="btn2" type="button" class="answerChoice btn btn-primary"><span id="choice2"></span></button>
+                    <button id="btn3" type="button" class="answerChoice btn btn-primary"><span id="choice3"></span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--jQuery-->
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+<!--Javscript-->
+<script type="text/javascript" src="assets/javascript/app.js"></script>
+
+</body>
+</html>

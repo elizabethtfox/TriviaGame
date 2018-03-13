@@ -1,0 +1,26 @@
+body{
+    background: url('../images/background.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.timer{
+    font-size: 12px;
+}
+
+.jumbotron{
+    margin-top: 20px;
+    background-color: lightblue;
+}
+
+.panel-default>.panel-heading {
+    color: #333;
+    background-color: lightblue;
+    border-color: #ddd;
+}
+
+.panel-body {
+    padding: 28px;
+}
