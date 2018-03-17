@@ -37,14 +37,13 @@ $(document).ready(function() {
     var wrong = 0;
     var q1 = {
         question :'What is the name of the restaurant that makes the BEST waffles?',
-        possibleAnswers : [
-            1: "Dan's",
-            2: 'IHOW',
-            3: 'Waffle House',
-            4: "JJ's Diner"],
-        flags : [false, false, false, true],
+        possibleAnswers : ["Dan's",
+            'IHOW',
+            'Waffle House',
+            "JJ's Diner"],
+    flags : [false, false, false, true],
         answer : "JJ's Diner"
-    };
+};
 
     var q2 = {
         question: "What is the name of the most lovable minature horse in Pawnee?",
@@ -159,17 +158,13 @@ $(document).ready(function() {
     setup();
     $('.answerChoice').on('click', function() {
         console.log("this", correct);
-        console.log(questionArray[index].answer["1"]);
-        console.log(questionArray[index].answer["2"]);
-        console.log(questionArray[index].answer["3"]);
-        console.log(questionArray[index].answer["4"]);
-        if ($('#choice0')) {
+        if (this.id == '#choice0') {
             var answerChosen = 'A';
-        } else if ($('#choice1')) {
+        } else if (this.id == '#choice1') {
             answerChosen = 'B';
-        } else if ($('#choice2')) {
+        } else if (this.id == '#choice2') {
             answerChosen = 'C';
-        } else if ($('#choice3')) {
+        } else if (this.id == '#choice3') {
             answerChosen = 'D';
         }
         if ((answerChosen == 'A') && (questionArray[index].flags[0] == true)) { //If the answer the user chooses is A (or choice0) AND flag for index 0 of the array is true than answer is correct
