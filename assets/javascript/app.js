@@ -1,9 +1,9 @@
 $(document).ready(function() {
     var index = 0; //holds the count of each question
     var countdownTimer = {
-        time : 30,
+        time : 10,
         reset: function() {
-            this.time = 30;
+            this.time = 10;
             $('.timer').html('<h3>' + this.time + ' seconds remaining</h3>');
         },
         start: function() {
@@ -41,7 +41,7 @@ $(document).ready(function() {
             'IHOW',
             'Waffle House',
             "JJ's Diner"],
-    flags : [false, false, false, true],
+        flags : [false, false, false, true],
         answer : "JJ's Diner"
 };
 
@@ -136,13 +136,13 @@ $(document).ready(function() {
 
     function answerCorrect() {
         correct++;
-        //alert("Correct!");
+        alert("Correct!");
         console.log("correct");
     }
 
     function answerWrong() {
         wrong++;
-        //alert("Incorrect!");
+        alert("Incorrect!");
         console.log("wrong");
     }
 
@@ -157,34 +157,25 @@ $(document).ready(function() {
 
     setup();
     $('.answerChoice').on('click', function() {
-        console.log("this", correct);
-        if (this.id == '#choice0') {
-            var answerChosen = 'A';
-        } else if (this.id == '#choice1') {
-            answerChosen = 'B';
-        } else if (this.id == '#choice2') {
-            answerChosen = 'C';
-        } else if (this.id == '#choice3') {
-            answerChosen = 'D';
-        }
-        if ((answerChosen == 'A') && (questionArray[index].flags[0] == true)) { //If the answer the user chooses is A (or choice0) AND flag for index 0 of the array is true than answer is correct
+        console.log(this);
+        if ((this.value === 'A') && (questionArray[index].flags[0] == true)) { //If the answer the user chooses is A (or choice0) AND flag for index 0 of the array is true than answer is correct
             answerCorrect();
-        } else if (answerChosen == 'A') {
+        } else if (this.value === 'A') {
             answerWrong();
         }
-        if ((answerChosen == 'B') && (questionArray[index].flags[1] == true)) {
+        if ((this.value === 'B') && (questionArray[index].flags[1] == true)) {
             answerCorrect();
-        } else if (answerChosen == 'B') {
+        } else if (this.value === 'B') {
             answerWrong();
         }
-        if ((answerChosen == 'C') && (questionArray[index].flags[2] == true)) {
+        if ((this.value === 'C') && (questionArray[index].flags[2] == true)) {
             answerCorrect();
-        } else if (answerChosen == 'C') {
+        } else if (this.value === 'C') {
             answerWrong();
         }
-        if ((answerChosen == 'D') && (questionArray[index].flags[3] == true)) {
+        if ((this.value === 'D') && (questionArray[index].flags[3] == true)) {
             answerCorrect();
-        } else if (answerChosen == 'D') {
+        } else if (this.value === 'D') {
             answerWrong();
         }
 
